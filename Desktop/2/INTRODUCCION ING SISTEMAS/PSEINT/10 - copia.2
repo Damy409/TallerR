@@ -1,0 +1,19 @@
+Algoritmo 10.2
+	
+	Definir tarifa, horas, salario, horase Como Real
+	Escribir "Digite las horas trabajadas"
+	leer horas
+	Escribir "Digite su tarifa"
+	leer tarifa
+	
+	Si horas<=180 Entonces
+		salario<-horas*tarifa
+		Escribir salario
+	SiNo
+		Si horas>180 Entonces
+			horase<-(horas-180)
+			salario<-(180*tarifa)+(tarifa*1.5) * horase
+			Escribir salario
+		Fin Si
+	Fin Si
+FinAlgoritmo

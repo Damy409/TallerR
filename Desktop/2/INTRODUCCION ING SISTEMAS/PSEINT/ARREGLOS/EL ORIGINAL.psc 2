@@ -1,0 +1,38 @@
+Algoritmo sin_titulo
+	Definir edades, n, i, pos, posi, edMe, edMa, promedio  Como Entero
+	
+	Escribir "Digite a cuantos estudiantes se les va a pedir la edad"
+	leer n
+	n <- n + 1 
+	Dimension edades[n]
+	
+	Para i <- 1 Hasta n-1 Con Paso 1 Hacer
+		Escribir "Digite la edad del estudiante"
+		leer edades[i]
+		promedio <- promedio + edades[i]
+	Fin Para
+	
+	Para i <- 1 Hasta n - 1 Con Paso 1 Hacer
+		Si i = 1 Entonces
+			edMa <- edades[i]
+			edMe <- edades[i]
+			pos <- i
+			posi <- i
+		SiNo
+			Si edMa < edades[i] Entonces
+				edMa <- edades[i]
+				pos <- i
+			Fin Si
+			Si edMe > edades[i] Entonces
+				edMe <- edades[i]
+				posi <- i
+			Fin Si
+		Fin Si
+	Fin Para
+	Mostrar " La edad mayor es " edMa " y la posicion en la que esta es " pos
+	Mostrar " La edad menor es " edMe " y la posicion en la que esta es " posi
+	
+	
+	promedio <- promedio / (n-1)
+	Mostrar "El promedio de todas las edades es de: " promedio
+FinAlgoritmo

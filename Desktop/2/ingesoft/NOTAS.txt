@@ -1,0 +1,20 @@
+Verás, el contador es para el primer numero del factorial
+sabes que el factorial de 5 es
+5*4*3*2*1 = 120
+
+Entonces el contador inicia siendo el ultimo 1 que se multiplica en esa expresion, correcto?
+
+Ok, entonces se usa el while para ir aumentando el valor de contador hasta 5 que es el numero del factorial que queremos encontrar
+
+igualmente inicializamos el factorial en 1, porque?
+porque es la variable que acumulara el resultado del factorial, multiplicando los numeros del 1 al 5 en caso del factorial de 5
+
+Con eso en mente se inicia en 1 para que el contador multiplicando a esa variable no modifique el valor final
+
+Ejemplo: si inicio el factorial en 0 
+
+pero por ejemplo si factorial que es uno es igual a factorial por el contador eso seria uno por uno cierto?
+
+y luego dice que contador *= 1 eso quiere decir que le suma al valor principal del contador uno ? y asi hasta que llegue al numero que dijito la persona verdad?
+EPAA GRACIASSSSS I LOVE YOU 
+si voy al baño me regaña el profe?

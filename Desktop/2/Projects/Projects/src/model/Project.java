@@ -1,0 +1,72 @@
+package model;
+
+import java.util.Calendar;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+
+import java.text.ParseException;
+
+
+public class Project{
+	
+	private String nameProject;
+	private String clientName;
+	private Calendar initialDate;
+	private Calendar finalDate;
+	private double budget;
+	private TypeProject typeProject;
+
+	private DateFormat formatter;
+
+	public Project(String nameProject, String clientName, Calendar initialDate, Calendar finalDate, double budget, TypeProject typeProject){
+		
+		this.formatter = new SimpleDateFormat("dd/M/yy");
+
+		this.nameProject = nameProject;	
+		this.clientName = clientName;
+		this.initialDate = initialDate;
+		this.finalDate = finalDate;
+		this.budget = budget;
+		this.typeProject = typeProject;
+	}
+
+	public String getNameProject(){
+		return nameProject;
+	}
+	
+	public String getClientName(){
+		return clientName;
+	}
+
+	public Calendar getInitialDate(){
+		return initialDate;
+	}
+
+	public String getInitialDateFormated() throws ParseException{
+		return formatter.format(this.initialDate.getTime());
+	}
+
+	public Calendar getFinalDate(){
+		return finalDate;
+	}
+
+	public String getFinalDateFormated() throws ParseException{
+		return formatter.format(this.finalDate.getTime());
+	}		
+
+	public double getBudget(){
+		return budget;
+	}
+
+	public TypeProject getTypeProject(){
+		return typeProject;
+	}
+
+	public String getProjectInfo() throws ParseException{
+		return "\nName: " + nameProject + "\nClient: " + clientName + "\nInitial Date: " + getInitialDateFormated() + 
+		"\nFinal Date: " + getFinalDateFormated() + "\nTotalBudget: " + budget + "\nType Project: " +typeProject;
+	}
+}
+
+
+

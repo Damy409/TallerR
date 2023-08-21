@@ -1,0 +1,44 @@
+Algoritmo sin_titulo
+	Definir edades, i, n, edMa, edMe, pos, posi Como Entero
+	Definir nombres Como Caracter
+	
+	Escribir "Digite a cuantos estudiantes se les va a pedir el nombre y la edad"
+	leer n
+	n <- n + 1
+	
+	Dimension edades[n]
+	Dimension nombres[n]
+	
+	Para i <- 1 Hasta n-1 Con Paso 1 Hacer
+		
+		Escribir "Digite el nombre del estudiante"
+		Leer nombres[i]
+		Escribir "Digite la edad del estudiante"
+		leer edades[i]
+		
+	Fin Para
+	
+	Para i <- 1 Hasta n-1 Con Paso 1 Hacer
+		Si i = 1 Entonces
+			edMa <- edades[i]
+			edMe <- edades[i]
+			pos <- i
+			posi <- i
+		SiNo
+			Si edMa < edades[i] Entonces
+				edMa <- edades[i]
+				pos <- i
+			Fin Si
+			Si edMe > edades[i] Entonces
+				edMe <- edades[i]
+				posi <- i
+			Fin Si
+		Fin Si
+	Fin Para
+	
+	Mostrar " El nombre del estudiante con la edad mayor es " nombres[pos] " con la edad de " edMa " y la posicion en la que esta es " pos
+	Mostrar " El nombre del estudiante con la edad menor es " nombres[posi] " con la edad de " edMe " y la posicion en la que esta es " posi
+	
+	
+
+FinAlgoritmo
